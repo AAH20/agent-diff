@@ -47,12 +47,12 @@ AGENT_THINKING_TRACE = """Thinking Process:
 def run_demo() -> None:
     print("=" * 76)
     print("  🔍 AGENT-DIFF: VISUAL AST & EXECUTION-TRACE PR DIFFING ENGINE")
-    print("  Frontier Model Support: Claude 3.7 Sonnet | OpenAI o3 | Gemini 2.5 Pro")
+    print("  Frontier Model Support: Claude Opus 5.5 | GPT-6 Astra | Gemini 3.8 Flash")
     print("=" * 76)
 
     pr_title = "feat: optimize payment processing pipeline for high throughput"
-    author_agent = "Claude-3.7-Autonomous-Engineer"
-    model = "claude-3-7-sonnet-20250219"
+    author_agent = "Claude-Opus-5-5-Autonomous-Engineer"
+    model = "claude-opus-5-5"
 
     print(f"Auditing PR: \"{pr_title}\"")
     print(f"Author Agent: {author_agent} ({model})")
@@ -71,7 +71,7 @@ def run_demo() -> None:
 
     # Step 2: Trace Mapping & Discrepancy Detection
     print("-" * 76)
-    print("[2/3] Correlating Diffs with Claude 3.7 Sonnet Extended Thinking Trace")
+    print("[2/3] Correlating Diffs with Claude Opus 5.5 Adaptive Thinking Trace")
     print("-" * 76)
     mapper = ExecutionTraceMapper(AGENT_THINKING_TRACE)
     enriched_chunks = mapper.link_diff_chunks(chunks)

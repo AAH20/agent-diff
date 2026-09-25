@@ -52,7 +52,7 @@ class BlastRadiusReport:
 class AgentDiffAudit:
     pr_title: str
     author_agent: str
-    model_name: str              # e.g. "claude-3-7-sonnet-20250219", "o3"
+    model_name: str              # e.g. "claude-opus-5-5", "gpt-6-astra", "gemini-3-8"
     files_analyzed: int
     lines_added: int
     lines_deleted: int

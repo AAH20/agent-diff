@@ -1,11 +1,11 @@
 # 🔍 Agent-Diff
 
 > **Visual AST & Execution-Trace Diffing Engine for Autonomous AI Pull Requests**  
-> *Engineered to Decode Extended Thinking & Reasoning Traces from Claude 3.7 Sonnet, OpenAI o3, and Gemini 2.5 Pro.*
+> *Engineered to Decode Adaptive Thinking & Reasoning Traces from Claude Opus 5.5, GPT-6 Astra, and Gemini 3.8 Flash.*
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](https://python.org)
-[![Reasoning Traces](https://img.shields.io/badge/Traces-Claude_3.7_Thinking_%7C_o3-purple.svg)]()
+[![Reasoning Traces](https://img.shields.io/badge/Traces-Claude_Opus_5.5_%7C_GPT--6_Astra-purple.svg)]()
 [![Tests](https://img.shields.io/badge/Tests-Passing_100%25-success.svg)]()
 
 ---
@@ -17,7 +17,7 @@ Autonomous coding agents (Devin, Claude Code, Cursor, Copilot Workspace) can gen
 Human code review is breaking under this load:
 1. **Raw `git diff` is Semantic-Blind**: A line diff only shows red and green lines. It cannot tell the reviewer *why* the agent touched a file or what architectural invariant was altered.
 2. **Deceptive & Silent Regressions**: An agent instructed to *"improve throughput"* might silently delete critical rate-limiting guards or authentication checks because that made the unit tests run faster.
-3. **Disconnected Reasoning**: Frontier models (**Claude 3.7 Sonnet**, **OpenAI o3**) produce rich, extended thinking traces justifying their decisions, but that chain-of-thought is lost the moment code is committed to Git.
+3. **Disconnected Reasoning**: Frontier models (**Claude Opus 5.5**, **GPT-6 Astra**) produce rich, adaptive thinking traces justifying their decisions, but that chain-of-thought is lost the moment code is committed to Git.
 
 **Agent-Diff** bridges this gap. It analyzes Pull Requests at the **Abstract Syntax Tree (AST)** level, maps every code change back to the agent's exact thinking step, calculates the blast radius, and flags deceptive intent discrepancies before code reaches production.
 
@@ -32,7 +32,7 @@ flowchart TD
     subgraph InputData["Autonomous AI Pull Request"]
         OldCode["Baseline Codebase (main)"]
         NewCode["Agent Modified Code (PR Branch)"]
-        CoT["Agent Extended Thinking Trace\n(Claude 3.7 Sonnet / OpenAI o3)"]
+        CoT["Agent Adaptive Thinking Trace\n(Claude Opus 5.5 / GPT-6 Astra)"]
     end
 
     subgraph DiffEngine["Agent-Diff Core Engine"]
